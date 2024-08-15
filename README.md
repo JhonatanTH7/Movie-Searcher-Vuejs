@@ -2,11 +2,13 @@
 
 ## Project Setup
 
+## Install Dependencies
+
 ```sh
 npm install
 ```
 
-### Or
+#### Or
 
 ```sh
 npm i
