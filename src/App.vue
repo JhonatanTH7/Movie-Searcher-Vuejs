@@ -1,11 +1,7 @@
 <template>
-  <BannerComponent />
-  <MoviesList />
+  <RouterView />
 </template>
 
-<script setup lang="ts">
-import BannerComponent from "@/components/banner/Banner.vue";
-import MoviesList from "@/components/movies/MoviesList.vue";
-</script>
+<script setup lang="ts"></script>
 
 <style></style>

@@ -1,16 +1,18 @@
 <template>
-  <div class="cardMovie">
+  <div class="cardMovie p-20">
     <h3 class="titleCard">{{ props.title }}</h3>
-    <img :src="props.poster" :alt="props.title" />
+    <img class="w-90" :src="props.poster" :alt="props.title" />
     <p>
-      <span>Año:</span>
+      <span>Year:</span>
       {{ props.year }}
     </p>
     <p>
-      <span>Tipo:</span>
+      <span>Type:</span>
       {{ props.type }}
     </p>
-    <a href="#">Ver detalles</a>
+    <router-link :to="{ name: 'movie-details', params: { id: props.id } }">
+      View Details
+    </router-link>
   </div>
 </template>
 
@@ -28,10 +30,8 @@ const props = defineProps<IProps>();
 
 <style scoped lang="scss">
 .cardMovie {
-  height: 100%;
   width: 300px;
   background: $secondary;
-  padding: 10px;
   text-align: center;
   border: 2px solid $primary;
   border-radius: 10px;
@@ -53,7 +53,6 @@ p {
 }
 
 img {
-  width: 90%;
   height: 300px;
   object-fit: scale-down;
   border-radius: 10px;
