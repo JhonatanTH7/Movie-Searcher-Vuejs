@@ -14,7 +14,7 @@
           ><strong>Duration:</strong> {{ store.detailedMovie.Runtime }}</span
         >
         <span><strong>Type:</strong> {{ store.detailedMovie.Type }}</span>
-        <h4>Plot</h4>
+        <span><strong>Plot</strong></span>
         <p>{{ store.detailedMovie.Plot }}</p>
       </div>
     </div>
@@ -80,6 +80,10 @@ onMounted(() => {
     font-size: 15px;
     justify-content: center;
     flex-direction: column;
+    h2,
+    strong {
+      color: $primary;
+    }
     p {
       text-align: justify;
     }
@@ -89,14 +93,15 @@ onMounted(() => {
 .bottom-info {
   display: flex;
 
-  .additional-info {
-    display: flex;
-    flex-direction: column;
-  }
-
+  .additional-info,
   .ratings {
     display: flex;
     flex-direction: column;
+    h3 {
+      display: flex;
+      flex-direction: column;
+      color: $primary;
+    }
   }
 }
 
