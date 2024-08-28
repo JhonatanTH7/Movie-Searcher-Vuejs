@@ -1,6 +1,6 @@
 <template>
   <section class="banner-section d-middle w-100 p-10">
-    <form>
+    <form @submit.prevent="$event.preventDefault()">
       <div class="search-input d-middle">
         <input
           type="text"

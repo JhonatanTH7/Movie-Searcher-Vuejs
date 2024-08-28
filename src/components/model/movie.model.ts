@@ -1,3 +1,8 @@
+export interface Error {
+  Response: boolean;
+  Error: string;
+}
+
 export interface Movie {
   Title: string;
   Year: string;
@@ -31,7 +36,8 @@ export interface DetailedMovie {
   BoxOffice: string;
   Production: string;
   Website: string;
-  Response: string;
+  Error: string;
+  Response: boolean;
 }
 
 export interface Rating {
